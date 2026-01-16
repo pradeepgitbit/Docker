@@ -1,9 +1,9 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:27-ea-slim-trixie
 
 WORKDIR /app
 
-COPY src/main.java /app/main.java
+COPY src/Main.java /app/Main.java
 
-RUN javac main.java
+RUN javac Main.java
 
 CMD [ "java", "main" ]
